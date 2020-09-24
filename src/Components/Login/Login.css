@@ -1,0 +1,38 @@
+.input-form{
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 350px;
+    margin-top: 10px;
+    margin-left: 460px;
+    padding: 10px;
+}
+
+.dual-btn{
+    background-color: rgb(250, 189, 36);
+    border: none;
+    padding: 10px;
+    width: 250px;
+}
+
+.alter-btn{
+    border: 1px solid grey;
+    background-color: white;
+    border-radius: 20px;
+    width: 300px;
+}
+
+button img{
+    height: 25px;
+    padding: 0 0 3px;
+}
+
+#logo1{
+    margin-right: 40px;
+}
+#logo2{
+    margin-right: 50px;
+}
+
+.alter-btn small{
+    margin-right: 80px;
+}

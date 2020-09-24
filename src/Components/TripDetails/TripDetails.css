@@ -1,0 +1,23 @@
+.details-container{
+    display: flex;
+    margin-top: 50px;
+}
+.card
+{
+    border: 1px solid none;
+    height: 330px;
+    width: 415px;
+}
+.container form{
+    margin-top: 25px;
+}
+.container form .main-btn{
+    color: black;
+    background-color: rgb(250, 189, 36);
+}
+.container form input{
+    background-color:rgb(240, 240, 240);
+}
+.title{
+    color: white;
+}

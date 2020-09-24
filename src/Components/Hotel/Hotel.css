@@ -1,0 +1,16 @@
+img{
+    height: 160px;
+}
+
+.hotel-container{
+    display: flex;
+    padding: 10px;
+}
+.text-container{
+    padding:0 20px;
+}
+
+.text-container img{
+    height: 13px;
+    margin-bottom: 5px;
+}

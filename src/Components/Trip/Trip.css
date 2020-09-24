@@ -1,0 +1,19 @@
+.carousel-container{
+    margin-top: 75px;
+}
+.image img{
+    height: 400px;
+    width: 300px;
+}
+.image-first img{
+    height: 400px;
+    width: 300px;
+    border-radius: 20px;
+}
+.carousel-control-prev{
+    display: none;
+}
+.intro{
+    margin-bottom: 220px;
+    color: white;
+}
