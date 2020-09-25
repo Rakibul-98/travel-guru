@@ -52,6 +52,7 @@ const fbSignIn = () => {
 const handleResponse = (res, redirect) =>{
     setUser(res);
     setLoggedInUser(res);
+    console.log(res)
     if (redirect) {
         history.replace(from);
     }
@@ -96,7 +97,7 @@ const handleSubmit = (e) => {
   if (!newUser && user.email && user.password) {
     signInUserWithEmailAndPassword(user.email, user.password)
     .then(res => {
-        handleResponse(res, true)
+      handleResponse(res, true)
     })
   }
   e.preventDefault();

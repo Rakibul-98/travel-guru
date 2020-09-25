@@ -22,7 +22,7 @@ const Book = () => {
 
     const style={
         borderTop:"1px solid grey",
-        display:"flex"
+        display:"flex",
     }
     return (
         <div>

@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../App';
 import logo from '../../images/image.png'
 import './Header.css'
 
+
+
 const Header = () => {
+
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
         <div className="header">
                 <img src={logo} alt=""/>
@@ -13,9 +18,12 @@ const Header = () => {
                 <Link to="/book"><small>Destination</small></Link>
                 <Link to="/blog"><small>Blog</small></Link>
                 <Link to="/contact"><small>Contact</small></Link>
-                <Link to ="/login">
-                    <button className="main-btn"><small>Login</small></button>
-                </Link>
+                {
+                    loggedInUser.success ?  <Link style={{color:"white",fontSize:"15px",fontWeight:"bold"}}>{loggedInUser.displayName || loggedInUser.name} </Link>
+                      : <Link to ="/login">
+                      <button className="main-btn"><small>Login</small></button>
+                      </Link> 
+                }
             </nav>
         </div>
     );

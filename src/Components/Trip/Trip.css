@@ -17,3 +17,9 @@
     margin-bottom: 220px;
     color: white;
 }
+.second-btn{
+    background-color: rgb(235, 176, 27) ;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 20px;
+}
