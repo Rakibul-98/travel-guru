@@ -2,7 +2,7 @@ img{
     height: 160px;
 }
 
-.hotel-container{
+.hotel{
     display: flex;
     padding: 10px;
 }

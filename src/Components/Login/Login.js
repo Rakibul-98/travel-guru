@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useContext } from 'react';
 import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router-dom';
-import { createUserWithEmailAndPassword, handleFbSignIn, handleGoogleSignIn, handleSignOut, initializeLoginFramework, signInUserWithEmailAndPassword } from './LoginManager';
+import { createUserWithEmailAndPassword, handleFbSignIn, handleGoogleSignIn, handleSignOut, initializeLoginFramework, resetPassword, signInUserWithEmailAndPassword } from './LoginManager';
 import { TextField } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import './Login.css';
@@ -51,7 +51,7 @@ const fbSignIn = () => {
 
 const handleResponse = (res, redirect) =>{
     setUser(res);
-    setLoggedInUser(user);
+    setLoggedInUser(res);
     if (redirect) {
         history.replace(from);
     }
@@ -141,7 +141,7 @@ return (
                       name="password"
                       required
                   /></p>
-                  <p><small><input type="checkbox"/> <label>Remember Me</label> <Link style={{color:"rgb(250, 189, 36)",marginLeft:"20px"}}>Forget password</Link></small></p>
+                  <p><small><input type="checkbox"/> <label>Remember Me</label> <Link onClick={() => resetPassword(user.email)} style={{color:"rgb(250, 189, 36)",marginLeft:"20px"}}>Forget password</Link></small></p>
                   <p><small><input className="dual-btn" type="submit" value="Log in" /></small></p>
                   <p><small>{newUser ? "Already have an account?" : "Don't have an account?" }<Link style={{color:"rgb(250, 189, 36)"}} onClick={() => setNewUser(!newUser)} name="new-user">{newUser ? "Login" : "Create an account"}</Link></small></p>
               </div>

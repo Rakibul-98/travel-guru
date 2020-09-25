@@ -5,7 +5,7 @@ const Hotel = (props) => {
     const {name, description, condition, rating, price, photo, duration, logo} = props.hotels;
     return (
         <div>
-            <div className="col-md-7 hotel-container">
+            <div className="hotel">
                 <img src={photo} alt=""/>
                 <div className="text-container">
                     <h6>{name} </h6>

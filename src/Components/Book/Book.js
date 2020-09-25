@@ -6,7 +6,7 @@ import Header2 from '../Header/Header2';
 import Hotel from '../Hotel/Hotel';
 import logo from '../../Icon/star_1_.png';
 import { UserContext } from '../../App';
-
+import SimpleMap from '../Hotel/MapCreate';
 
 
 
@@ -21,17 +21,23 @@ const Book = () => {
     ]
 
     const style={
-        borderTop:"1px solid grey"
+        borderTop:"1px solid grey",
+        display:"flex"
     }
     return (
         <div>
             <Header2/>
             <div style={style} className="container">
-                <p style={{marginTop:"20px"}}><small>253 stays Apr 13-17 3 guests</small></p>
-                <h5 style={{fontWeight:"bold"}}>Stay in {loggedInUser[0].destination} </h5>
-                {
-                    hotels.map( hotel => <Hotel hotels={hotel} key={hotel.id} ></Hotel>)
-                }
+                <div className="col-md-7">
+                    <p style={{marginTop:"20px"}}><small>253 stays Apr 13-17 3 guests</small></p>
+                    <h5 style={{fontWeight:"bold"}}>Stay in Cox's Bazar </h5>
+                    {
+                        hotels.map( hotel => <Hotel hotels={hotel} key={hotel.id} ></Hotel>)
+                    }
+                </div>
+                <div className="col-md-5">
+                    <SimpleMap/>
+                </div>
             </div>
         </div>
     );

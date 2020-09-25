@@ -5,7 +5,7 @@ import sreemangal from '../../images/Sreemongol.png'
 import sundarban from '../../images/sundorbon.png'
 import './Trip.css'
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const Trip = () => {
     return (
@@ -22,11 +22,13 @@ const Trip = () => {
                                 </Link>
                             </div>
                             <div className="col-md-5 image-first">
-                                <img
-                                    className="d-block"
-                                    src={cox}
-                                    alt="First slide"
-                                />
+                                <Link to="/cox">
+                                    <img
+                                        className="d-block"
+                                        src={cox}
+                                        alt="First slide"
+                                    />
+                                </Link>
                             </div>
                         </div>
                     </Carousel.Item>
@@ -40,11 +42,13 @@ const Trip = () => {
                                 </Link>
                             </div>
                             <div className="col-md-5 image">
-                                <img
-                                    className="d-block"
-                                    src={sreemangal}
-                                    alt="First slide"
-                                />
+                                <Link to="/sreemongol">
+                                    <img
+                                        className="d-block"
+                                        src={sreemangal}
+                                        alt="First slide"
+                                    />
+                                </Link>
                             </div>
                         </div>
                     </Carousel.Item>
@@ -58,11 +62,13 @@ const Trip = () => {
                                 </Link>
                             </div>
                             <div className="col-md-5 image">
-                                <img
-                                    className="d-block"
-                                    src={sundarban}
-                                    alt="First slide"
-                                />
+                                <Link to="/sundarbans">
+                                    <img
+                                        className="d-block"
+                                        src={sundarban}
+                                        alt="First slide"
+                                    />
+                                </Link>
                             </div>
                         </div>
                     </Carousel.Item>
