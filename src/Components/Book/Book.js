@@ -1,19 +1,15 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import hotel1 from '../../images/Rectangle 26.png';
 import hotel2 from '../../images/Rectangle 27.png';
 import hotel3 from '../../images/Rectangle 28.png';
 import Header2 from '../Header/Header2';
 import Hotel from '../Hotel/Hotel';
 import logo from '../../Icon/star_1_.png';
-import { UserContext } from '../../App';
 import SimpleMap from '../Hotel/MapCreate';
 
 
 
 const Book = () => {
-
-    const loggedInUser = useContext(UserContext);
-
     const hotels =[
         {id : 1, name : "Hotel Cox Today", description : "4 Guests, 2 Bedrooms, 2 beds, 2 Baths, WiFi facilities Air Conditioning kitchen Natural view", condition: "Cancellation flexibility available", rating :"4.9(20)", logo: logo,  price :"$34/",  duration:"night", photo : hotel1},
         {id : 2, name : "Hotel Seagull", description : "4 Guests, 2 Bedrooms, 2 beds, 2 Baths, WiFi facilities Air Conditioning kitchen Natural view", condition: "Cancellation flexibility available", rating :"4.8(31)", logo: logo,  price :"$22/",  duration:"night", photo : hotel2},
